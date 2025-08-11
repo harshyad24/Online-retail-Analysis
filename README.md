@@ -256,7 +256,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For questions or suggestions regarding this project, please open an issue or reach out through GitHub.
-
----
-
-*This project is for educational and analytical purposes, demonstrating data science techniques applied to retail analytics.*
