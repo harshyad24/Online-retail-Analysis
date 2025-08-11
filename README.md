@@ -206,3 +206,85 @@ During the analysis period, the online retail industry was experiencing rapid gr
 This online retail company demonstrates strong fundamentals with significant growth potential. The analysis reveals a business well-positioned in the UK market with untapped international opportunities and room for customer development. Success will depend on executing a balanced strategy of market diversification, customer value enhancement, and operational excellence while maintaining the core strengths that drive current performance.
 
 The data-driven approach outlined in this case study provides a framework for strategic decision-making and performance monitoring, ensuring that growth initiatives align with market realities and customer needs. With proper execution of these recommendations, the company is positioned to achieve sustainable growth while reducing concentration risks and improving overall market resilience.
+
+
+## 📊 Dataset Information
+
+### Dataset Overview
+- **Source**: UK-based online retail company specializing in unique all-occasion gifts
+- **Time Period**: December 1, 2010 to December 9, 2011 (13 months)
+- **Initial Records**: 541,909 transactions
+- **Final Dataset**: 397,924 transactions (after data cleaning)
+- **Data Cleaning**: Removed 135,080 rows with missing CustomerID values
+- **Unique Customers**: 4,339 customers
+- **Geographic Reach**: 37 countries worldwide
+- **Product Catalog**: 3,665 unique stock codes, 3,877 product descriptions
+- **Total Revenue**: $8,911,407.90
+- **Average Transaction Value**: $22.39
+
+### Data Schema
+| Column | Description | Data Type | Sample Values | Unique Count |
+|--------|-------------|-----------|---------------|--------------|
+| `InvoiceNo` | Unique invoice/transaction identifier | Object | 536365, 536366 | 18,536 |
+| `StockCode` | Product/item code | Object | 85123A, 71053 | 3,665 |
+| `Description` | Product description | Object | WHITE HANGING HEART T-LIGHT HOLDER | 3,877 |
+| `Quantity` | Number of items purchased | Integer | 6, 8, 12 | 302 |
+| `InvoiceDate` | Transaction date and time | Object | 12/1/10 8:26 | 17,286 |
+| `UnitPrice` | Price per unit ($) | Float | 2.55, 3.39, 2.75 | 441 |
+| `CustomerID` | Unique customer identifier | Float | 17850.0, 13047.0 | 4,339 |
+| `Country` | Customer's country | Object | United Kingdom, France | 37 |
+
+### Data Statistics
+- **Price Range**: $0.00 - $8,142.75
+- **Quantity Range**: 1 - 80,995 units per transaction
+- **Date Coverage**: 305 unique dates across 13 months
+- **Countries Covered**: 37 countries across multiple continents
+- **Business Hours**: Transactions recorded between 6 AM - 8 PM
+- **Peak Activity**: 12:00 PM with highest transaction volume
+
+### Geographic Distribution
+**Top 5 Markets by Revenue:**
+1. **United Kingdom**: $7,308,391.55 (82% of total revenue) - 354,345 orders
+2. **Netherlands**: $285,446.34 (3.2%) - 2,363 orders, $120.80 AOV
+3. **Germany**: $228,867.14 (2.6%) - 9,042 orders
+4. **EIRE**: $265,545.90 (3.0%) - 7,238 orders  
+5. **France**: $209,024.05 (2.3%) - 8,342 orders
+
+**Additional Markets**: Australia, Austria, Bahrain, Belgium, Brazil, Canada, Channel Islands, Cyprus, Czech Republic, Denmark, European Community, Finland, Greece, Iceland, Israel, Italy, Japan, Lebanon, Lithuania, Malta, Norway, Poland, Portugal, RSA, Saudi Arabia, Singapore, Spain, Sweden, Switzerland, USA, United Arab Emirates, and others.
+
+### Customer & Product Insights
+**Customer Characteristics:**
+- **Customer ID Range**: 12346.0 - 18287.0
+- **Top Customer**: CustomerID 14646 with $280,206.02 total spending
+- **Customer Distribution**: Highly concentrated in UK (90% of customers)
+- **Average Items per Transaction**: 13.02 items
+- **Customer Behavior**: Mix of B2C retail and B2B wholesale patterns
+
+**Product Categories:**
+- Gift items and home décor products
+- Craft supplies and DIY materials  
+- Seasonal and holiday items
+- Home storage and organization
+- Decorative accessories and novelties
+
+**Top 5 Products by Revenue:**
+1. **PAPER CRAFT, LITTLE BIRDIE** - $168,469.60 (80,995 units sold)
+2. **REGENCY CAKESTAND 3 TIER** - $142,592.95 (12,412 units sold)
+3. **WHITE HANGING HEART T-LIGHT HOLDER** - $100,448.15 (36,725 units sold)
+4. **JUMBO BAG RED RETROSPOT** - $85,220.78 (46,181 units sold)
+5. **MEDIUM CERAMIC TOP STORAGE JAR** - $81,416.73 (77,916 units sold)
+
+### Temporal Patterns
+**Business Operations:**
+- **Operating Hours**: 6 AM to 8 PM (15 unique hours)
+- **Peak Hour**: 12:00 PM ($1,378,571.48 in sales)
+- **Best Day**: Thursday ($1,976,859.07 total sales)
+- **Peak Month**: September 2011 ($952,838.38)
+- **Seasonal Pattern**: Strong holiday and back-to-school performance
+
+**Data Quality Notes:**
+- All transactions have complete data after cleaning
+- No missing values in the final dataset
+- Date format: MM/DD/YY H:MM  
+- Currency: USD ($)
+- Negative quantities indicate returns/cancellations
