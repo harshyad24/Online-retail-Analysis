@@ -234,6 +234,81 @@ The data-driven approach outlined in this case study provides a framework for st
 | `CustomerID` | Unique customer identifier | Float | 17850.0, 13047.0 | 4,339 |
 | `Country` | Customer's country | Object | United Kingdom, France | 37 |
 
+# 🛒 Online Retail Data Analysis
+
+A comprehensive data analysis project exploring transactional data from a UK-based online retail store.
+
+## 🛠️ Technologies Used
+
+### Core Libraries
+```python
+import pandas as pd                    # Data manipulation and analysis
+import numpy as np                     # Numerical computing
+import matplotlib.pyplot as plt       # Static visualizations
+import seaborn as sns                  # Statistical plots
+import plotly.express as px           # Interactive charts
+import plotly.graph_objects as go     # Advanced plotting
+```
+
+### Environment
+- **Jupyter Notebook** - Development environment
+- **Python 3.7+** - Programming language
+
+## 📊 Analysis Methods
+
+### Data Processing
+```python
+# Data cleaning
+df = df.dropna(subset=['CustomerID'])
+df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
+df['TotalAmount'] = df['Quantity'] * df['UnitPrice']
+
+# Feature engineering
+df['Hour'] = df['InvoiceDate'].dt.hour
+df['Month'] = df['InvoiceDate'].dt.month
+df['DayOfWeek'] = df['InvoiceDate'].dt.day_name()
+```
+
+### Analysis Techniques
+- **Descriptive Statistics**: `df.describe()`, `df.info()`
+- **Groupby Operations**: Customer, product, and geographic analysis
+- **Time Series Analysis**: Monthly, daily, and hourly patterns
+- **Data Aggregation**: Revenue, quantity, and customer metrics
+
+
+## 📈 Visualization Methods
+
+### Static Charts (Matplotlib + Seaborn)
+```python
+# Revenue trends
+plt.figure(figsize=(12, 6))
+monthly_sales.plot(kind='bar')
+
+# Distribution analysis
+sns.histplot(data, bins=50)
+sns.heatmap(correlation_matrix, annot=True)
+```
+
+### Interactive Charts (Plotly)
+```python
+# Geographic mapping
+fig = px.choropleth(country_data, locations='Country', color='Revenue')
+
+# Time series
+fig = px.line(monthly_data, x='Month', y='Revenue')
+
+# Customer segmentation  
+fig = px.scatter(customer_data, x='Frequency', y='Monetary')
+```
+
+## 🔧 Workflow
+1. **Data Loading**: Import and explore dataset structure
+2. **Data Cleaning**: Handle missing values and data types
+3. **Feature Engineering**: Create temporal and calculated fields
+4. **EDA**: Statistical analysis and pattern identification
+5. **Visualization**: Generate insights through charts and graphs
+6. **Business Insights**: Extract actionable findings
+
 ### Data Statistics
 - **Price Range**: $0.00 - $8,142.75
 - **Quantity Range**: 1 - 80,995 units per transaction
